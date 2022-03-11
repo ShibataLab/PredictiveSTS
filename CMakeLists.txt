@@ -1,9 +1,9 @@
-# Replace the main and main to build the executables
+# Replace the replay and replay to build the executables
 
 project(stsSynthesis,)
 cmake_minimum_required(VERSION 3.2)
 
-set( PROJ_SOURCES "src/main.cpp" "src/modelFunsCommon.cpp" "src/modelFunsStanding.cpp" "src/modelFunsSitting.cpp" "src/parameterization.cpp" 
+set( PROJ_SOURCES "src/replay.cpp" "src/modelFunsCommon.cpp" "src/modelFunsStanding.cpp" "src/modelFunsSitting.cpp" "src/parameterization.cpp" 
 					"src/RegisterTypes_osimPlugin.cpp" "src/seatConstraintHandler.cpp" "src/utility.cpp")
 
 set( PROJ_INC "inc/" )
@@ -30,9 +30,9 @@ link_directories(
 	/home/vinay/libs/opensim_dependencies_install/simbody/lib
 	/home/vinay/libs/libcmaes/build/src)
 
-add_executable( main ${PROJ_SOURCES} )
+add_executable( replay ${PROJ_SOURCES} )
 
-target_link_libraries( main
+target_link_libraries( replay
 osimActuators
 osimAnalyses
 osimCommon

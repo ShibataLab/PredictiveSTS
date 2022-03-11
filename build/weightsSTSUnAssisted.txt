@@ -1,2 +1,2 @@
 # Cost Weights: progress, vTf, feet-mg, chairForce, a, da, limitForce, ZMP, slip 
-800, 6, 0.3, 1.2, 175, 70, 10, 1000, 0.1
+800, 6, 0.3, 1.2, 175, 70, 10, 100, 0.1

@@ -55,7 +55,7 @@ double computeCostChair(const OpenSim::Storage &forceStorage){
 	const std::vector<double> dtVec = dVector(tVec);
 
 	//// Force applied by the ground to keep the constraint
-	const int indChairForceY = forceStorage.getStateIndex("seatConstraint_ground_Fy");
+	const int indChairForceY = forceStorage.getStateIndex("chairForce.pelvis_cnctFrame.force.Y");
 	std::vector<double> chairForceYVec(tVec.size(), 0.0);
 	double *chairForceYVecPtr = chairForceYVec.data();
 	forceStorage.getDataColumn(indChairForceY, chairForceYVecPtr);

@@ -113,7 +113,6 @@ std::vector<double> runSimulation(OpenSim::Model &osimModel, const Parameterizat
     osimModel.setUseVisualizer(visualizeResults);
     auto frcReporter{std::make_unique<OpenSim::ForceReporter>()};
     frcReporter->setName("forceReporter");
-    frcReporter->includeConstraintForces(true);
     osimModel.addAnalysis(frcReporter.get());
 
     #ifdef Assisted
@@ -126,7 +125,7 @@ std::vector<double> runSimulation(OpenSim::Model &osimModel, const Parameterizat
 
     if(visualizeResults) osimModel.updVisualizer().updSimbodyVisualizer().setShowSimTime(true);
 
-    ReleaseSeatConstraint *releaseSeatConstraint = new ReleaseSeatConstraint(osimModel, SimTK::ConstraintIndex(6), 0.0);
+    ReleaseSeatConstraint *releaseSeatConstraint = new ReleaseSeatConstraint(osimModel, 1e-1);
     osimModel.updMultibodySystem().addEventHandler(releaseSeatConstraint);
 
     SimTK::State &si = osimModel.initializeState();

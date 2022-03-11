@@ -47,6 +47,7 @@ int main(int argc, char *argv[]){
     #endif
 
     OpenSim::ModelVisualizer::addDirToGeometrySearchPaths("../geometry");
+    OpenSim::ModelVisualizer::addDirToGeometrySearchPaths("../geometry/LumbarGeometry");
     addComponentsToModel(BASE_MODEL_NAME, REPLAY_MODEL_NAME);
 
     const int numTotalVars = numVarsPerComp*NUM_COMPS*NUM_ACTUATORS+1;

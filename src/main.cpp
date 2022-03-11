@@ -75,6 +75,7 @@ int main(int argc, const char *argv[])
         const std::string plotFile = logFolder + "plotting.dat";
 
         OpenSim::ModelVisualizer::addDirToGeometrySearchPaths("../geometry");
+        OpenSim::ModelVisualizer::addDirToGeometrySearchPaths("../geometry/LumbarGeometry");
         addComponentsToModel(BASE_MODEL_NAME, OPTIM_MODEL_NAME);
 
         FitFunc objectiveFunc = [&weightsVec](const double* newControls, const int numDecisionVars){

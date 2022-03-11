@@ -35,7 +35,7 @@ from matplotlib.pylab import subplot, semilogy, grid, title
 # from matplotlib.pylab import figure, subplot, semilogy, hold, grid, axis, title, text, xlabel, isinteractive, draw, gcf
 # TODO: the above direct imports clutter the interface in a Python shell
 
-pylab.switch_backend("tkagg")
+#pylab.switch_backend("tkagg")
 
 # number of static variables at the head of every line (i.e. independent of problem dimension)
 single_values = 4
